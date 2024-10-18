@@ -1,0 +1,26 @@
+<div class="author">
+  <h1 class="author__heading">Hello, this is Vortex.</h1>
+  <p class="author__body">Web developer and content creator.</p>
+</div>
+
+<!-- <img src="./img/tazwar.jpg" alt="profile pic" class="hero-image" width="800" /> -->
+<video autoplay muted loop playsinline class="hero-image" width="1000">
+  <source src="./img/tazwar.mp4" type="video/mp4">
+</video>
+
+<section class="articles">
+  <h2 class="articles__heading">Lates Posts</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+    <li>
+      <a href="/post/<%= post._id %>">
+        <span><%= post.title %></span>
+        <span class="article-list__date"
+          ><%= post.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</section>
